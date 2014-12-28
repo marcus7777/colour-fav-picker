@@ -26,38 +26,6 @@ textarea {
     top:0;
     width: 300px;
     height: 430px;
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 4000000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 4000000ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 4000000ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-    animation-name: spin;
-    animation-duration: 4000000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-@-ms-keyframes spin {
-    from {-ms-transform: rotate(0deg)}
-    to {-ms-transform: rotate(360deg)}
-}
-@-moz-keyframes spin {
-    from {-moz-transform: rotate(0deg)}
-    to {-moz-transform: rotate(360deg)}
-}
-@-webkit-keyframes spin {
-    from {-webkit-transform: rotate(0deg)}
-    to {-webkit-transform: rotate(360deg)}
-}
-@keyframes spin {
-    from {transform:rotate(0deg)}
-    to {transform:rotate(360deg)}
 }
 body {
     background: #FFF;
@@ -130,9 +98,11 @@ function distributeFields() {
             var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
 
         }
+	ofsetX =($(window).width() - width )/2;
+	ofsetY =($(window).height() - height)/2;
         $(this).css({
-            left: x + 'px',
-            top: y + 'px',
+            left:( x + ofsetX )+ 'px',
+	    top:( y + ofsetY) + 'px',
             height: size + 'px',
             width: size + 'px',
             borderRadius: size / 2 + 'px',
@@ -163,5 +133,6 @@ function shuffle(array) {
   <body>
     <textarea type="text" value=""></textarea>
     <center><div id="container"></div></center>
+
   </body>
 </html>
