@@ -22,13 +22,8 @@ textarea {
   opacity: 0;
   transition: top 7s linear, left 7s linear, visibility 0s .3s, opacity .3s linear;
 }
-#container {
-    top:0;
-    width: 300px;
-    height: 430px;
-}
 body {
-    background: #FFF;
+    background: #FFF;overflow: hidden;
 }
 .field {position: absolute}
 .c0 {background:#757575}
@@ -67,13 +62,13 @@ function createFields() {
   }
   distributeFields();
 }
+window.onresize = distributeFields;
 function distributeFields() {
   var radius = 200,
       radius_in = 150,
       fields = $('.field:not(.hidden)'),
-      container = $('#container'),
-      width = container.width(),
-      height = container.height(),
+      width = $(window).width(),
+      height = $(window).height(),
       angle = 0,
       step = (2 * Math.PI) / fields.length;
   if (fields.length == 1) {
@@ -98,12 +93,10 @@ function distributeFields() {
             var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
 
         }
-	ofsetX =($(window).width() - width )/2;
-	ofsetY =($(window).height() - height)/2;
         $(this).css({
-            left:( x + ofsetX )+ 'px',
-	    top:( y + ofsetY) + 'px',
-            height: size + 'px',
+            left:x+'px',
+	    top:y+'px',
+            height:size+'px',
             width: size + 'px',
             borderRadius: size / 2 + 'px',
         });
@@ -132,7 +125,6 @@ function shuffle(array) {
   </head>
   <body>
     <textarea type="text" value=""></textarea>
-    <center><div id="container"></div></center>
-
+    <div id="container"></div>
   </body>
 </html>
