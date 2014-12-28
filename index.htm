@@ -6,7 +6,10 @@
   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
   <style type='text/css'>
 textarea {
-   opacity:.6;top:0;height:100%;width:100%;left:0;border:none;position:absolute
+   opacity:.1;top:0;height:100%;width:100%;left:0;border:none;position:absolute
+}
+textarea:focus {
+   opacity:1
 }
 .field {
   position:absolute;
@@ -64,8 +67,8 @@ function createFields() {
 }
 window.onresize = distributeFields;
 function distributeFields() {
-  var radius = 200,
-      radius_in = 150,
+  var radius = $(window).height() / 3,
+      radius_in = $(window).height() / 4,
       fields = $('.field:not(.hidden)'),
       width = $(window).width(),
       height = $(window).height(),
@@ -74,6 +77,7 @@ function distributeFields() {
   if (fields.length == 1) {
     fields.each(function () {
       $('textarea').val($('textarea').val() + $(this).attr('class').replace('hidden', '').replace('field c', '') + "\n");
+      // alert($('textarea').val());
     });
     createFields();
     distributeFields();
