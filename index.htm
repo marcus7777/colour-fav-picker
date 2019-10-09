@@ -17,145 +17,147 @@
     <script type="text/javascript" src="jquery.pointat.min.js"></script>
     <style type="text/css">
     body, textarea {
-      background-color:#fffcfc
-    }
-    textarea {
-      top:0;
-      width:100%;
-      left:0;
-      text-align: right;
-      border:none;
-      position: absolute;
-      height:10em;
-    }
-    body {
-      overflow:hidden;
-    }
-    #container {
-      width: 300px;
-      height: 500px;
-      -webkit-animation-name: spin;
-      -webkit-animation-duration: 400000ms;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      -moz-animation-name: spin;
-      -moz-animation-duration: 400000ms;
-      -moz-animation-iteration-count: infinite;
-      -moz-animation-timing-function: linear;
-      -ms-animation-name: spin;
-      -ms-animation-duration: 400000ms;
-      -ms-animation-iteration-count: infinite;
-      -ms-animation-timing-function: linear;
-      animation-name: spin;
-      animation-duration: 40000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-    @-ms-keyframes spin {
-      from {
+  background-color:#e7e4e4
+ }
+textarea {
+    top:0;
+    width:100%;
+    left:0;
+    text-align: right;
+    border:none;
+    position: absolute;
+    height:10em;
+}
+body {
+    overflow:hidden;
+}
+#container {
+  vertical-align: middle;
+    width: 100vh;
+    height: 100vh;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 400000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 400000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 400000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 40000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from {
         -ms-transform: rotate(0deg);
-      }
-      to {
+    }
+    to {
         -ms-transform: rotate(0deg);
-      }
     }
-    @-moz-keyframes spin {
-      from {
+}
+@-moz-keyframes spin {
+    from {
         -moz-transform: rotate(0deg);
-      }
-      to {
+    }
+    to {
         -moz-transform: rotate(0deg);
-      }
     }
-    @-webkit-keyframes spin {
-      from {
+}
+@-webkit-keyframes spin {
+    from {
         -webkit-transform: rotate(0deg);
-      }
-      to {
+    }
+    to {
         -webkit-transform: rotate(0deg);
-      }
     }
-    @keyframes spin {
-      from {
+}
+@keyframes spin {
+    from {
         transform:rotate(0deg);
-      }
-      to {
+    }
+    to {
         transform:rotate(0deg);
-      }
     }
-    .field {
-      position: absolute;
-      border-radius: 35px;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      text-align: center;
-    }
-    body {
-      padding: 2em;
-    }
-    #center {
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      left: 295px;
-      top: 295px;
-      background: #000;
-    }
-    .field {
-      position: absolute;
-    }
-    .c0 {
-      background: #757575;
-    }
-    .c1 {
-      background: #000066;
-    }
-    .c2 {
-      background: #00DBDB;
-    }
-    .c3 {
-      background: #fc0000;
-    }
-    .c4 {
-      background: #ffff00;
-    }
-    .c5 {
-      background: #7f007f;
-    }
-    .c6 {
-      background: #962517;
-    }
-    .c7 {
-      background: #000000;
-    }
-    .c8 {
-      background: #006161;
-    }
-    .c9 {
-      background: #ff7f7f;
-    }
-    .ci {
-      background: #0000ff;
-    }
-    .cS {
-      background: #e3008c;
-    }
-    .cE {
-      background: #ff7f00;
-    }
-    .cG {
-      background: #9dff00;
-    }
-    .cY {
-      background: #666600;
-    }
-    .moveAni {
-      transition: left 400ms ease-out, top 400ms ease-out;
-    }
-    .moveAni {
-      transition: left 400ms ease-out, top 400ms ease-out;
-    }
+}
+.field {
+    position: absolute;
+    border-radius: 35px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+body {
+    padding: 2em;
+}
+#center {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 295px;
+    top: 295px;
+    background: #000;
+}
+.field {
+    position: absolute;
+    border: #00000036 solid .5px
+}
+.c0 {
+    background: #767474;
+}
+.c1 {
+    background: #000066;
+}
+.cB {
+    background: #008080;
+}
+.c3 {
+    background: #fc0000;
+}
+.c4 {
+    background: #ffff00;
+}
+.c5 {
+    background: #7f007f;
+}
+.c6 {
+    background: #9d2718;
+}
+.c7 {
+    background: #000000;
+}
+.cs {
+    background: #800031;
+}
+.cq {
+    background: #ff6666;
+}
+.ce {
+    background: #c08040;
+}
+.cS {
+    background: #e3008c;
+}
+.cE {
+    background: #ff7f00;
+}
+.cG {
+    background: #80ff00;
+}
+.cU {
+    background: #9d00ff;
+}
+.moveAni {
+    transition: left 400ms ease-out, top 400ms ease-out;
+}
+.moveAni {
+    transition: left 400ms ease-out, top 400ms ease-out;
+}
   </style>
   <script type="text/javascript">
 
